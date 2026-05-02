@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 interface SidebarProps {
     activeMenu: string;
-    setActiveMenu: React.Dispatch<React.SetStateAction<string>>;
+    setActiveMenu: (menu: string) => void;
 }
 
 export default function Sidebar({ activeMenu, setActiveMenu }: SidebarProps) {
