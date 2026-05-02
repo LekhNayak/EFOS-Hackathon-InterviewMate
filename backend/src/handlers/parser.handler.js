@@ -5,12 +5,9 @@ const User = require("../models/user.model");
 exports.createResume = async (req, res) => {
     try {
         const { ...data } = req.body;
+        data.userId = req.user._id;
         const parsedResume = new ParsedResume(data);
-        console.log("✅ Resume created:", parsedResume);
         await parsedResume.save();
-
-        console.log("✅ Saving Resume:", parsedResume); // <--- ADD THIS
-
         res.status(201).json({ success: true, resume: parsedResume });
     } catch (err) {
         console.error("Error creating resume:", err);
@@ -18,10 +15,9 @@ exports.createResume = async (req, res) => {
     }
 };
 
-// ✅ Get all resumes (for admin use)
 exports.getAllResumes = async (req, res) => {
     try {
-        const resumes = await ParsedResume.find();
+        const resumes = await ParsedResume.find({ userId: req.user._id });
         res.json({ success: true, resumes });
     } catch (error) {
         console.error("❌ Get All Resumes Error:", error);
@@ -45,7 +41,7 @@ exports.getResumesByUser = async (req, res) => {
 exports.deleteResume = async (req, res) => {
     try {
         console.log("DELETE request received for:", req.params.id);
-        const deleted = await ParsedResume.findByIdAndDelete(req.params.id);
+        const deleted = await ParsedResume.findOneAndDelete({ _id: req.params.id, userId: req.user._id });
         console.log("Mongoose delete result:", deleted);
 
         if (!deleted)

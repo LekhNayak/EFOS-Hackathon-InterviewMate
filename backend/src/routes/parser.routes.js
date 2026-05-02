@@ -22,7 +22,7 @@ router.put("/update/:id", userAuth, async (req, res) => {
 
   try {
     const updatedResume = await ParsedResume.findOneAndUpdate(
-      { _id: req.params.id },   // ✅ use _id, not id
+      { _id: req.params.id, userId: req.user._id },
       req.body,
       { new: true, runValidators: true }
     );
