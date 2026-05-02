@@ -1,4 +1,4 @@
-# InterViewMate — CLAUDE.md
+# InterViewMate 
 
 > AI-powered interview preparation and resume analysis platform. Full-stack app with a React frontend, Node.js/Express backend, and three Python ML microservices.
 
