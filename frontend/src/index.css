@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+
+ :root {
+    --background: 220 17% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 245 58% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 52% 47%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 180 78% 55%;
+    --accent-foreground: 222 47% 11%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 245 58% 51%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 245 58% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 245 58% 51%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(245 58% 51%), hsl(262 52% 47%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    --shadow-soft: 0 2px 8px -2px hsl(222 47% 11% / 0.08);
+    --shadow-medium: 0 8px 16px -4px hsl(222 47% 11% / 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  }
+
+
+
+  * {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd transparent;
+}
+  .bg-radial-gray {
+  background: radial-gradient(
+    circle at center 90%,
+    #FAFAFA 0%,
+    #FAFAFA 40%,
+    #F5F5F5 40%,
+    #F5F5F5 52.5%,
+    #F0F0F0 52.5%,
+    #F0F0F0 65%,
+    #EBEBEB 65%,
+    #EBEBEB 77.5%,
+    #E6E6E6 77.5%,
+    #E6E6E6 90%
+  );
+}
+.loader-ring {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 100vh;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  animation: rotate 12s linear infinite;
+  transform-origin: center center;
+    z-index: 0;
+  pointer-events: none;
+}
+
+.loader-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #25252596;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform-origin: 0 0; /* Crucial: orbit around ring center */
+}
+
+/* Maintain consistent orbit radii */
+.loader-dot:nth-child(1) {
+  transform: rotate(0deg) translateX(455px);
+}
+.loader-dot:nth-child(2) {
+  transform: rotate(120deg) translateX(455px);
+}
+
+.loader-dot:nth-child(3) {
+  transform: rotate(30deg) translateX(595px);
+}
+
+.loader-dot:nth-child(4) {
+  transform: rotate(270deg) translateX(595px);
+}
+
+.loader-dot:nth-child(5) {
+  transform: rotate(180deg) translateX(715px);
+}
+.loader-dot:nth-child(6) {
+  transform: rotate(300deg) translateX(715px);
+}
+
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+
+/* Orbit animation */
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
