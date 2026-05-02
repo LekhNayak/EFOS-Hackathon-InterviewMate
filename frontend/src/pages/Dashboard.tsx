@@ -8,6 +8,7 @@ import Simulations from "@/components/DashboardContent/Simulations";
 import Test from "@/components/DashboardContent/test";
 import ATSChecker from "@/components/DashboardContent/ATSChecker";
 import TopNav from "@/components/DashboardContent/TopNav";
+import JobFinder from "@/components/DashboardContent/Jobfinder";
 
 export default function Dashboard() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -23,20 +24,27 @@ export default function Dashboard() {
         <div className="flex-1 overflow-y-auto">{children}</div>
     );
 
-    const renderContent = () => {
-        switch (activeMenu) {
-            case "Dashboard":
-                return scroll(<DashboardHome />);
-            case "Simulations":
-                return scroll(<Simulations search={search} setSearch={setSearch} />);
-            case "Resume Building":
-                return scroll(<Test />);
-            case "Resume ATS Checker":
-                return <ATSChecker />;
-            default:
-                return scroll(<DashboardHome />);
-        }
-    };
+  const renderContent = () => {
+    switch (activeMenu) {
+        case "Dashboard":
+            return scroll(<DashboardHome />);
+
+        case "Simulations":
+            return scroll(<Simulations search={search} setSearch={setSearch} />);
+
+        case "Resume Building":
+            return scroll(<Test />);
+
+        case "Resume ATS Checker":
+            return <ATSChecker />;
+
+        case "Find Jobs":  
+            return <JobFinder />;
+
+        default:
+            return scroll(<DashboardHome />);
+    }
+};
 
     return (
         <div className="min-h-screen flex">

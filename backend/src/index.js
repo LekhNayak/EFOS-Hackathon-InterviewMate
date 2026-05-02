@@ -12,6 +12,7 @@ const jdRouter = require("../src/routes/jd.routes");
 const companyRoutes = require("../src/routes/company.routes");
 const atsRouter = require('./routes/ats.routes');
 const interviewRouter = require('./routes/interview.routes');
+const jobRoutes = require("../src/routes/job.routes");
 
 const app = express();
 
@@ -39,7 +40,7 @@ app.use("/api/jd", jdRouter);
 app.use("/api/companies", companyRoutes);
 app.use("/api/ats", atsRouter);
 app.use("/api/interview", interviewRouter);
-
+app.use("/api/jobs", jobRoutes);
 // Start server
 connect()
     .then(() => {

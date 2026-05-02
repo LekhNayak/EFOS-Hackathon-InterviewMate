@@ -7,6 +7,7 @@ import {
     PanelLeft,
     PanelRight,
     LogOut,
+    Briefcase,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -53,6 +54,10 @@ export default function Sidebar({ activeMenu, setActiveMenu }: SidebarProps) {
         { label: "Simulations", icon: PlayCircle },
         { label: "Resume Building", icon: FileUser },
         { label: "Resume ATS Checker", icon: ScanSearch },
+        {
+    label: "Find Jobs",
+    icon: Briefcase, // reuse same icon
+}
     ];
 
     return (
