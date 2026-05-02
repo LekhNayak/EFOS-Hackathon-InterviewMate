@@ -176,7 +176,15 @@ const FeedbackModal: React.FC<{ feedback: Feedback, onClose: () => void }> = ({ 
 
 
 
-export default function WebinarUI() {
+interface SimulationData {
+    role: string;
+    resume: string;
+    jd: string;
+    interview_level: string;
+    interview_duration: string;
+}
+
+export default function WebinarUI({ simulation: _simulation }: { simulation?: SimulationData } = {}) {
     const location = useLocation();
     const state = location.state as {
         company: string;
