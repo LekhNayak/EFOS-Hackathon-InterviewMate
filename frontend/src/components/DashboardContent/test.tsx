@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const API = import.meta.env.VITE_API_BASE_URL;
 import { v4 as uuidv4 } from "uuid";
 import ResumePreview from "@/components/Resume/ResumePreview";
 import ResumeEditor from "@/components/Resume/Resumeeditor";
@@ -30,7 +31,7 @@ const ResumeBuilder: React.FC = () => {
     useEffect(() => {
         const fetchResumes = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/api/parser/all`, {
+                const res = await fetch(`${API}/parser/all`, {
                     method: "GET",
                     credentials: "include"
                 });
@@ -76,7 +77,7 @@ const ResumeBuilder: React.FC = () => {
         if (!isMongoId) return;
 
         try {
-            await fetch(`http://localhost:8000/api/parser/update/${id}`, {
+            await fetch(`${API}/parser/update/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -93,7 +94,7 @@ const ResumeBuilder: React.FC = () => {
 
         try {
             if (isMongoId) {
-                const res = await fetch(`http://localhost:8000/api/parser/delete/${id}`, {
+                const res = await fetch(`${API}/parser/delete/${id}`, {
                     method: "DELETE",
                     credentials: "include"
                 });

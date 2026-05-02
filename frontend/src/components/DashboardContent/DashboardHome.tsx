@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const API = import.meta.env.VITE_API_BASE_URL;
 import ProgressGraph from "../profile/progressbar";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ export default function DashboardHome() {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const res = await fetch("http://localhost:8000/api/user/profile", {
+                const res = await fetch(`${API}/user/profile`, {
                     method: "GET",
                     credentials: "include"
                 });
@@ -79,7 +80,7 @@ export default function DashboardHome() {
         };
 
         try {
-            const res = await fetch(`http://localhost:8000/api/user/update`, {
+            const res = await fetch(`${API}/user/update`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",

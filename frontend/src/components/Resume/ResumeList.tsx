@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const API = import.meta.env.VITE_API_BASE_URL;
 import { toast } from "sonner";
 import { MoreVertical, Download, Plus, Save, FilePlus, Upload } from "lucide-react";
 import type { Resume } from "../../types";
@@ -146,7 +147,7 @@ const ResumeList: React.FC<Props> = ({
         formData.append("file", file);
         formData.append("title", file.name.replace(/\.pdf$/i, "").replace(/_/g, " "));
         try {
-            const res = await fetch("http://localhost:8000/api/parser/parse", {
+            const res = await fetch(`${API}/parser/parse`, {
                 method: "POST",
                 body: formData,
                 credentials: "include",
@@ -179,7 +180,7 @@ const ResumeList: React.FC<Props> = ({
             const isMongoId = /^[0-9a-fA-F]{24}$/.test(resumeToSave._id || "");
 
             if (!isMongoId) {
-                const createRes = await fetch("http://localhost:8000/api/parser/create", {
+                const createRes = await fetch(`${API}/parser/create`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     credentials: "include",
@@ -193,7 +194,7 @@ const ResumeList: React.FC<Props> = ({
                 toast.success("New resume created successfully!");
             } else {
                 const updateRes = await fetch(
-                    `http://localhost:8000/api/parser/update/${resumeToSave._id}`,
+                    `${API}/parser/update/${resumeToSave._id}`,
                     {
                         method: "PUT",
                         headers: { "Content-Type": "application/json" },

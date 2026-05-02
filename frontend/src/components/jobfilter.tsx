@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Search, MapPin, Briefcase, Gauge, Filter } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search, MapPin, Briefcase, Gauge } from "lucide-react";
 import {
     Select,
     SelectContent,

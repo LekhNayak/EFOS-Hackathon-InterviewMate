@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+const API = import.meta.env.VITE_API_BASE_URL;
 import { toast } from "sonner";
 import JobFilterBar from "@/components/jobfilter";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import JDFolder from "../simulations/JdFolder";
-import Folder from "@/assets/image.png" // Assuming this path is correct
 
 // --- Interfaces ---
 const pastelColors = [
@@ -64,7 +64,7 @@ export default function Simulations({ search, setSearch }: SimulationsProps) {
     useEffect(() => {
         const getCompanies = async () => {
             try {
-                const res = await fetch("http://localhost:8000/api/jd/", {
+                const res = await fetch(`${API}/jd/`, {
                     credentials: "include"
                 });
 
@@ -133,7 +133,7 @@ export default function Simulations({ search, setSearch }: SimulationsProps) {
             formData.append("file", resumeFile);
             formData.append("title", resumeFile.name);
 
-            const res = await fetch("http://localhost:8000/api/parser/parse", {
+            const res = await fetch(`${API}/parser/parse`, {
                 method: "POST",
                 body: formData,
                 credentials: "include",
@@ -182,7 +182,7 @@ export default function Simulations({ search, setSearch }: SimulationsProps) {
 
         try {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8000/api/jd/parse");
+            xhr.open("POST", `${API}/jd/parse`);
             xhr.withCredentials = true;
 
             xhr.upload.onprogress = (event) => {
@@ -281,11 +281,7 @@ export default function Simulations({ search, setSearch }: SimulationsProps) {
                         <style>{`#companyScroll::-webkit-scrollbar { display: none; }`}</style>
 
                         {/* CARD LOOP */}
-                        {companies
-                            .filter((i) =>
-                                i.company.toLowerCase().includes(search.toLowerCase())
-                            )
-                            .map((company, index) => (
+                        {filtered.map((company, index) => (
                                 <div
                                     key={index}
                                     className="min-w-[320px] max-w-[320px] rounded-lg shadow-sm hover:shadow-md transition-all p-5 shrink-0"

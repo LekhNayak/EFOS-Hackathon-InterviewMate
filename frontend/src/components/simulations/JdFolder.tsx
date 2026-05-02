@@ -1,6 +1,5 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { Folder } from "lucide-react";
 
 interface JDFolderProps {
     name: string;
@@ -8,7 +7,7 @@ interface JDFolderProps {
     redirectTo: string; // e.g. "/jd/onboarding"
 }
 
-const JDFolder: FC<JDFolderProps> = ({ name, fileCount, redirectTo }) => {
+const JDFolder: FC<JDFolderProps> = ({ redirectTo }) => {
     const navigate = useNavigate();
 
     return (

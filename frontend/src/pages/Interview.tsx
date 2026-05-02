@@ -4,10 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 
-// Assume the backend is running locally on port 5000 as per the Python script
-// NOTE: Ensure this matches your actual backend host/port, e.g., http://localhost:5000
-const API_BASE_URL = "http://localhost:5000/api";
-const API_BASE_URL2 = "http://localhost:8090/api";
+const API_BASE_URL = import.meta.env.VITE_INTERVIEW_API;
+const API_BASE_URL2 = import.meta.env.VITE_EMOTION_API;
 
 // Define the state for the interview session
 type InterviewState = "initial" | "waiting_intro" | "in_interview" | "completed";
@@ -178,15 +176,7 @@ const FeedbackModal: React.FC<{ feedback: Feedback, onClose: () => void }> = ({ 
 
 
 
-interface SimulationData {
-    role: string;
-    resume: string;
-    jd: string;
-    interview_level: string;
-    interview_duration: string;
-}
-
-export default function WebinarUI({ simulation }: { simulation: SimulationData }) {
+export default function WebinarUI() {
     const location = useLocation();
     const state = location.state as {
         company: string;
@@ -206,7 +196,7 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
 
     // --- State for Media and UI ---
     const [hasMedia, setHasMedia] = useState(false);
-    const [audioEnabled, setAudioEnabled] = useState(true);
+    const [audioEnabled] = useState(true);
     const [videoEnabled, setVideoEnabled] = useState(true);
     const [permissionError, setPermissionError] = useState<string | null>(null);
     const [liveTime, setLiveTime] = useState(0); // seconds
@@ -227,7 +217,7 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
     const [feedback, setFeedback] = useState<Feedback | null>(null);
     const [showFeedbackModal, setShowFeedbackModal] = useState(false); // New state for modal
 
-    const [emotionResult, setEmotionResult] = useState<any | null>(null);
+    const [, setEmotionResult] = useState<any | null>(null);
 
     // --- Time Formatting Helper ---
     const formatTime = (s: number) => {
@@ -514,7 +504,7 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
         setLiveTime(0);
         console.log(state)
         try {
-            const response = await fetch("http://localhost:5000/api/start_interview", {
+            const response = await fetch(`${API_BASE_URL}/start_interview`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -671,16 +661,6 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
             setPermissionError(null);
         } catch (err: any) {
             setPermissionError(err?.message || "Permission denied");
-        }
-    };
-
-    const toggleAudio = () => {
-        if (!streamRef.current) return;
-        const tracks = streamRef.current.getAudioTracks();
-        if (tracks.length > 0) {
-            tracks.forEach(t => (t.enabled = !t.enabled));
-            setAudioEnabled(prev => !prev);
-            if (isRecording) stopRecording(); // Stop recording if audio is disabled mid-session
         }
     };
 

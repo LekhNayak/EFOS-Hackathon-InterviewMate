@@ -17,6 +17,8 @@ interface Props {
     onComplete: () => void;
 }
 
+const API = import.meta.env.VITE_API_BASE_URL;
+
 const ProfileSetupModal = ({ open, onClose, onComplete }: Props) => {
     const [linkedinUrl, setLinkedinUrl] = useState("");
     const [githubUrl, setGithubUrl] = useState("");
@@ -41,7 +43,7 @@ const ProfileSetupModal = ({ open, onClose, onComplete }: Props) => {
             formData.append("file", file);
             formData.append("title", "Imported Resume");
 
-            const parseRes = await fetch("http://localhost:8000/api/parser/parse", {
+            const parseRes = await fetch(`${API}/parser/parse`, {
                 method: "POST",
                 credentials: "include",
                 body: formData,
@@ -60,7 +62,7 @@ const ProfileSetupModal = ({ open, onClose, onComplete }: Props) => {
             ];
             console.log("🧠 Extracted Skills:", parsedSkills);
 
-            const updateRes = await fetch("http://localhost:8000/api/user/update", {
+            const updateRes = await fetch(`${API}/user/update`, {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
