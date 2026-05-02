@@ -1,0 +1,14 @@
+flask>=3.0.0
+flask-cors>=4.0.0
+python-dotenv>=1.0.0
+groq>=0.28.0
+requests>=2.32.0
+httpx>=0.27.0
+librosa>=0.10.2
+soundfile>=0.12.1
+numpy>=1.26.0,<2.0.0
+mediapipe>=0.10.14
+moviepy>=1.0.3
+opencv-python>=4.10.0.84
+sounddevice>=0.4.6
+playsound==1.2.2

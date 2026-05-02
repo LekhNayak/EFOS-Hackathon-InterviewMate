@@ -1,0 +1,12 @@
+flask
+flask-cors
+python-dotenv
+PyPDF2
+groq
+chromadb
+sentence-transformers
+requests
+
+streamlit
+tqdm
+

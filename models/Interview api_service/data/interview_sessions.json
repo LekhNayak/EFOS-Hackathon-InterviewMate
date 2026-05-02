@@ -1,0 +1,904 @@
+[
+  {
+    "session_id": "e1a74c96-25c7-4502-a604-aec1bd3f8ba7",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dbgyz4jbl/image/upload/v1777722261/resumes/1777722258200_Lekh_Nayak_Resume_2026.pdf.pdf",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume_2026.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f5e39738f20facb2cea5c6"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f5e39738f20facb2cea5c7"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f5e39738f20facb2cea5c8"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f5e39738f20facb2cea5c9"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f5e39738f20facb2cea5ca"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)",
+          "2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f5e39738f20facb2cea5c5",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "easy",
+    "interview_duration": "15min",
+    "system_prompt": "You are an expert interviewer for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dbgyz4jbl/image/upload/v1777722261/resumes/1777722258200_Lekh_Nayak_Resume_2026.pdf.pdf', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume_2026.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f5e39738f20facb2cea5c6'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f5e39738f20facb2cea5c7'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f5e39738f20facb2cea5c8'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f5e39738f20facb2cea5c9'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f5e39738f20facb2cea5ca'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)', '2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f5e39738f20facb2cea5c5', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[PARAMS]\n- Level: EASY\n- Duration: 15min\n\nInstructions:\n- Give a warm welcome after intro.\n- Ask strictly role-related questions referencing resume & JD.\n- Probe when answers are weak; move on when satisfied.\n- Conclude when time/depth is sufficient.\n\nWait for the candidate introduction before starting.",
+    "conversation_history": [],
+    "questions_asked": [],
+    "current_state": "waiting_intro",
+    "intro_received": false,
+    "start_time": "2026-05-02T17:16:36.080733"
+  },
+  {
+    "session_id": "8e2a36cc-4975-4834-9be5-f38781671e92",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777729204/resumes/1777729201648_Lekh_Nayak_Resume_2026",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume_2026.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f5feb661da475a8cd646af"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f5feb661da475a8cd646b0"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f5feb661da475a8cd646b1"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f5feb661da475a8cd646b2"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f5feb661da475a8cd646b3"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)",
+          "2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f5feb661da475a8cd646ae",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "easy",
+    "interview_duration": "15min",
+    "system_prompt": "You are an expert interviewer for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777729204/resumes/1777729201648_Lekh_Nayak_Resume_2026', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume_2026.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f5feb661da475a8cd646af'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f5feb661da475a8cd646b0'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f5feb661da475a8cd646b1'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f5feb661da475a8cd646b2'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f5feb661da475a8cd646b3'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)', '2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f5feb661da475a8cd646ae', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[PARAMS]\n- Level: EASY\n- Duration: 15min\n\nInstructions:\n- Give a warm welcome after intro.\n- Ask strictly role-related questions referencing resume & JD.\n- Probe when answers are weak; move on when satisfied.\n- Conclude when time/depth is sufficient.\n\nWait for the candidate introduction before starting.",
+    "conversation_history": [],
+    "questions_asked": [],
+    "current_state": "waiting_intro",
+    "intro_received": false,
+    "start_time": "2026-05-02T19:10:13.709868"
+  },
+  {
+    "session_id": "f300f622-b61d-4ec9-8be0-ffdd5f316674",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777729910/resumes/1777729909589_Lekh_Nayak_Resume_2026",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume_2026.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f6017861da475a8cd6473b"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f6017861da475a8cd6473c"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f6017861da475a8cd6473d"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f6017861da475a8cd6473e"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f6017861da475a8cd6473f"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)",
+          "2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f6017861da475a8cd6473a",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "medium",
+    "interview_duration": "30min",
+    "system_prompt": "You are an expert interviewer for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777729910/resumes/1777729909589_Lekh_Nayak_Resume_2026', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume_2026.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f6017861da475a8cd6473b'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f6017861da475a8cd6473c'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f6017861da475a8cd6473d'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f6017861da475a8cd6473e'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f6017861da475a8cd6473f'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)', '2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f6017861da475a8cd6473a', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[PARAMS]\n- Level: MEDIUM\n- Duration: 30min\n\nInstructions:\n- Give a warm welcome after intro.\n- Ask strictly role-related questions referencing resume & JD.\n- Probe when answers are weak; move on when satisfied.\n- Conclude when time/depth is sufficient.\n\nWait for the candidate introduction before starting.",
+    "conversation_history": [
+      {
+        "role": "candidate",
+        "content": "Hello, my name is Lekh Sanatan Nayak. I am a third year student at Sardar Patel Institute of Technology.",
+        "type": "intro"
+      },
+      {
+        "role": "interviewer",
+        "content": "Hello Lekh, it's a pleasure to meet you. Welcome to the interview for the Technology Intern role. We're excited to learn more about your skills and experiences.\n\nI've reviewed your resume, and I must say, you have an impressive list of projects, including InterviewMate, Collaborative VS Code, and CtrlFixIt. I'd love to dive deeper into these projects. Can you start by telling me what motivated you to work on InterviewMate, and what specific challenges you faced while developing a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone?",
+        "type": "question"
+      }
+    ],
+    "questions_asked": [
+      "Hello Lekh, it's a pleasure to meet you. Welcome to the interview for the Technology Intern role. We're excited to learn more about your skills and experiences.\n\nI've reviewed your resume, and I must say, you have an impressive list of projects, including InterviewMate, Collaborative VS Code, and CtrlFixIt. I'd love to dive deeper into these projects. Can you start by telling me what motivated you to work on InterviewMate, and what specific challenges you faced while developing a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone?"
+    ],
+    "current_state": "in_interview",
+    "intro_received": true,
+    "start_time": "2026-05-02T19:21:54.870880"
+  },
+  {
+    "session_id": "8636abe5-4597-4076-85b1-8005d128c91d",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777731861/resumes/1777731859019_Lekh_Nayak_Resume_2026",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume_2026.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f6091761da475a8cd64752"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f6091761da475a8cd64753"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f6091761da475a8cd64754"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f6091761da475a8cd64755"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f6091761da475a8cd64756"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)",
+          "2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f6091761da475a8cd64751",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "easy",
+    "interview_duration": "5min",
+    "interview_type": "technical_projects",
+    "max_questions": 3,
+    "system_prompt": "You are an expert interviewer conducting a Technical Interview (Projects Based) for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777731861/resumes/1777731859019_Lekh_Nayak_Resume_2026', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume_2026.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f6091761da475a8cd64752'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f6091761da475a8cd64753'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f6091761da475a8cd64754'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f6091761da475a8cd64755'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f6091761da475a8cd64756'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)', '2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f6091761da475a8cd64751', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[INTERVIEW PARAMETERS]\n- Type: Technical Interview (Projects Based)\n- Level: EASY\n- Duration: 5min\n- Max Questions: 3\n\n[INTERVIEW STYLE]\nFocus on the candidate's projects listed in their resume. Ask about architecture decisions, tech stack choices, challenges faced, how they solved problems, and what they would do differently. Probe depth of ownership and understanding. Do NOT ask generic DSA questions.\n\n[RULES]\n- Give a warm welcome after the candidate's introduction, then ask the first question.\n- Ask a maximum of 3 questions total. Keep track internally.\n- After the 3th question is answered, wrap up warmly: thank the candidate, give a brief encouraging closing remark, and end the interview. Do NOT ask another question.\n- Adjust question depth to difficulty level: easy.\n- Probe when answers are vague; move on when satisfied.\n- Keep each response focused — one question at a time.\n\nWait for the candidate's introduction before asking any questions.",
+    "conversation_history": [
+      {
+        "role": "candidate",
+        "content": "Yeah, hello, my name is Lekh Sanatand I am a third year student at Sardar Patil Institute of Technology and I love performing in hackathons taking part in various events and yeah.",
+        "type": "intro"
+      },
+      {
+        "role": "interviewer",
+        "content": "Welcome to the interview, Lekh. It's great to have you here today. I must say, your background in participating in hackathons and various events is quite impressive. I'd love to dive deeper into some of the projects you've worked on.\n\nLet's start with your project \"InterviewMate\". Can you tell me a bit about the architecture you chose for this personalized interview preparation platform, and what influenced your decision to use technologies like LangChain, Pinecone, and OpenAI API?",
+        "type": "question"
+      }
+    ],
+    "questions_asked": [
+      "Welcome to the interview, Lekh. It's great to have you here today. I must say, your background in participating in hackathons and various events is quite impressive. I'd love to dive deeper into some of the projects you've worked on.\n\nLet's start with your project \"InterviewMate\". Can you tell me a bit about the architecture you chose for this personalized interview preparation platform, and what influenced your decision to use technologies like LangChain, Pinecone, and OpenAI API?"
+    ],
+    "current_state": "in_interview",
+    "intro_received": true,
+    "start_time": "2026-05-02T19:55:00.396821"
+  },
+  {
+    "session_id": "d3e6dbe9-3724-4282-aa16-748d31345de2",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777731861/resumes/1777731859019_Lekh_Nayak_Resume_2026",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume_2026.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f6091761da475a8cd64752"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f6091761da475a8cd64753"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f6091761da475a8cd64754"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f6091761da475a8cd64755"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f6091761da475a8cd64756"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)",
+          "2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f6091761da475a8cd64751",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "easy",
+    "interview_duration": "5min",
+    "interview_type": "technical_projects",
+    "max_questions": 3,
+    "system_prompt": "You are an expert interviewer conducting a Technical Interview (Projects Based) for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777731861/resumes/1777731859019_Lekh_Nayak_Resume_2026', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume_2026.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f6091761da475a8cd64752'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f6091761da475a8cd64753'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f6091761da475a8cd64754'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f6091761da475a8cd64755'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f6091761da475a8cd64756'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate, CSI S.P.I.T ML Competition (Sardar Patel Institute of Technology, Mumbai)', '2nd Place: Runner up Best Delegate - AIPPM (mUNIFY S.P.I.T. Mumbai), MergeMania - Mergers & Acquisition (E-Summit 2025 S.P.I.T. Mumbai), Dreams and Deals - Pitching Contest, Pitch Hunt - Elevator Pitch Challenge, Annual Oxford Style Debate (S.P.C.E. Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f6091761da475a8cd64751', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[INTERVIEW PARAMETERS]\n- Type: Technical Interview (Projects Based)\n- Level: EASY\n- Duration: 5min\n- Max Questions: 3\n\n[INTERVIEW STYLE]\nFocus on the candidate's projects listed in their resume. Ask about architecture decisions, tech stack choices, challenges faced, how they solved problems, and what they would do differently. Probe depth of ownership and understanding. Do NOT ask generic DSA questions.\n\n[RULES]\n- Give a warm welcome after the candidate's introduction, then ask the first question.\n- Ask a maximum of 3 questions total. Keep track internally.\n- After the 3th question is answered, wrap up warmly: thank the candidate, give a brief encouraging closing remark, and end the interview. Do NOT ask another question.\n- Adjust question depth to difficulty level: easy.\n- Probe when answers are vague; move on when satisfied.\n- Keep each response focused — one question at a time.\n\nWait for the candidate's introduction before asking any questions.",
+    "conversation_history": [
+      {
+        "role": "candidate",
+        "content": "Hi My name is Lekh Sanatan Nayak, and i am a 3rd year student at Sardar Patel Institute of technology",
+        "type": "intro"
+      },
+      {
+        "role": "interviewer",
+        "content": "Welcome, Lekh, it's great to have you here today. I must say, your resume is quite impressive, and I'm excited to dive into some of the projects you've worked on. \n\nLet's start with your project \"InterviewMate\". Can you walk me through the architecture of this personalized interview preparation platform, and what inspired you to choose the tech stack you did, including React, Node.js, Express, MongoDB, LangChain, Pinecone, and OpenAI API?",
+        "type": "question"
+      },
+      {
+        "role": "candidate",
+        "content": "yeah the reason i chose this uh web stack is that i am very familiar with react and node and express so that this project was very easier for me to create and again i use mongodb because the data i am storing is not uh static and is very uh dynamic and that is why i am using mongodb again line chain and pinecone i used to create a custom rag application in which i am storing all the resumes and then I used openEI API to get me a summary of all the dynamic data I'm trying to store.",
+        "type": "answer"
+      },
+      {
+        "role": "interviewer",
+        "content": "Thank you for walking me through the architecture of InterviewMate, Lekh. It sounds like you leveraged your familiarity with the web stack to build a personalized interview preparation platform. \n\nI'd like to dive a bit deeper into the challenges you faced while building this project. You mentioned that you used LangChain and Pinecone to create a custom RAG application, which is quite impressive. Can you tell me more about how you handled the retrieval accuracy of 85% across the knowledge base of 500+ domain-specific Q&A pairs? What were some of the obstacles you encountered, and how did you overcome them to achieve this level of accuracy?",
+        "type": "question"
+      }
+    ],
+    "questions_asked": [
+      "Welcome, Lekh, it's great to have you here today. I must say, your resume is quite impressive, and I'm excited to dive into some of the projects you've worked on. \n\nLet's start with your project \"InterviewMate\". Can you walk me through the architecture of this personalized interview preparation platform, and what inspired you to choose the tech stack you did, including React, Node.js, Express, MongoDB, LangChain, Pinecone, and OpenAI API?",
+      "Thank you for walking me through the architecture of InterviewMate, Lekh. It sounds like you leveraged your familiarity with the web stack to build a personalized interview preparation platform. \n\nI'd like to dive a bit deeper into the challenges you faced while building this project. You mentioned that you used LangChain and Pinecone to create a custom RAG application, which is quite impressive. Can you tell me more about how you handled the retrieval accuracy of 85% across the knowledge base of 500+ domain-specific Q&A pairs? What were some of the obstacles you encountered, and how did you overcome them to achieve this level of accuracy?"
+    ],
+    "current_state": "completed",
+    "intro_received": true,
+    "start_time": "2026-05-02T20:00:24.854684",
+    "end_time": "2026-05-02T20:07:20.378126",
+    "feedback_generated": true
+  },
+  {
+    "session_id": "0b85d538-dca9-4515-9d9d-0c6f37e32709",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777733631/resumes/1777733630002_Lekh_Nayak_Resume",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f61002736094d63782c5d5"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f61002736094d63782c5d6"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f61002736094d63782c5d7"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f61002736094d63782c5d8"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f61002736094d63782c5d9"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate",
+          "2nd Place: Runner up Best Delegate – AIPPM (mUNIFY SPIT Mumbai), MergeMania – Mergers & Acquisition (E-Summit 2025 SPIT Mumbai), Dreams and Deals – Pitching Contest, Annual Oxford Style Debate (SPCE Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f61002736094d63782c5d4",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "medium",
+    "interview_duration": "5min",
+    "interview_type": "technical_projects",
+    "max_questions": 3,
+    "system_prompt": "You are an expert interviewer conducting a Technical Interview (Projects Based) for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777733631/resumes/1777733630002_Lekh_Nayak_Resume', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f61002736094d63782c5d5'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f61002736094d63782c5d6'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f61002736094d63782c5d7'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f61002736094d63782c5d8'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f61002736094d63782c5d9'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate', '2nd Place: Runner up Best Delegate – AIPPM (mUNIFY SPIT Mumbai), MergeMania – Mergers & Acquisition (E-Summit 2025 SPIT Mumbai), Dreams and Deals – Pitching Contest, Annual Oxford Style Debate (SPCE Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f61002736094d63782c5d4', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[INTERVIEW PARAMETERS]\n- Type: Technical Interview (Projects Based)\n- Level: MEDIUM\n- Duration: 5min\n- Max Questions: 3\n\n[INTERVIEW STYLE]\nFocus on the candidate's projects listed in their resume. Ask about architecture decisions, tech stack choices, challenges faced, how they solved problems, and what they would do differently. Probe depth of ownership and understanding. Do NOT ask generic DSA questions.\n\n[RULES]\n- Give a warm welcome after the candidate's introduction, then ask the first question.\n- Ask a maximum of 3 questions total. Keep track internally.\n- After the 3th question is answered, wrap up warmly: thank the candidate, give a brief encouraging closing remark, and end the interview. Do NOT ask another question.\n- Adjust question depth to difficulty level: medium.\n- Probe when answers are vague; move on when satisfied.\n- Keep each response focused — one question at a time.\n\nWait for the candidate's introduction before asking any questions.",
+    "conversation_history": [],
+    "questions_asked": [],
+    "current_state": "waiting_intro",
+    "intro_received": false,
+    "start_time": "2026-05-02T20:24:02.149510"
+  },
+  {
+    "session_id": "895ce6c3-edb5-4dff-8164-d58d4b50c094",
+    "role": "Technology Intern",
+    "resume_text": {
+      "success": true,
+      "resume": {
+        "pdfUrl": "https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777733631/resumes/1777733630002_Lekh_Nayak_Resume",
+        "userId": "69f5de1b366e143728d371cd",
+        "title": "Lekh_Nayak_Resume.pdf",
+        "header": {
+          "name": "Lekh Nayak",
+          "phone": "9326456576",
+          "email": "lekh.nayak23@spit.ac.in",
+          "github": "github.com/LekhNayak"
+        },
+        "objective": "",
+        "education": [
+          {
+            "institution": "Sardar Patel Institute Of Technology",
+            "degree": "B.Tech in Computer Science Engineering",
+            "duration": "Aug 2023 – Present",
+            "score": "CGPA: 8.05 /10",
+            "_id": "69f61002736094d63782c5d5"
+          },
+          {
+            "institution": "IIT Patna",
+            "degree": "Minor in Business Analytics",
+            "duration": "Mar 2025 – Present",
+            "score": "CGPA: 9.5/10",
+            "_id": "69f61002736094d63782c5d6"
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "SQL"
+          ],
+          "frameworks": [
+            "React",
+            "Express.js",
+            "Node.js",
+            "PyTorch",
+            "Scikit-learn",
+            "NLTK",
+            "BERT"
+          ],
+          "other": [
+            "Git",
+            "Docker",
+            "Team Management",
+            "Team Collaboration",
+            "Public Speaking"
+          ]
+        },
+        "projects": [
+          {
+            "title": "InterviewMate",
+            "duration": "Sept 2025 - Dec 2025",
+            "tech": "React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API",
+            "event": "",
+            "points": [
+              "Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.",
+              "Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.",
+              "Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses."
+            ],
+            "_id": "69f61002736094d63782c5d7"
+          },
+          {
+            "title": "Collaborative VS Code",
+            "duration": "Jan 2026 - Mar 2026",
+            "tech": "React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL",
+            "event": "",
+            "points": [
+              "Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.",
+              "Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.",
+              "Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection."
+            ],
+            "_id": "69f61002736094d63782c5d8"
+          },
+          {
+            "title": "CtrlFixIt",
+            "duration": "Jan 2026 - Feb 2026",
+            "tech": "Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka",
+            "event": "",
+            "points": [
+              "Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.",
+              "Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.",
+              "Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job."
+            ],
+            "_id": "69f61002736094d63782c5d9"
+          }
+        ],
+        "activities": [
+          "Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.",
+          "Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.",
+          "1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate",
+          "2nd Place: Runner up Best Delegate – AIPPM (mUNIFY SPIT Mumbai), MergeMania – Mergers & Acquisition (E-Summit 2025 SPIT Mumbai), Dreams and Deals – Pitching Contest, Annual Oxford Style Debate (SPCE Mumbai)",
+          "Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)"
+        ],
+        "_id": "69f61002736094d63782c5d4",
+        "__v": 0
+      }
+    },
+    "jd_text": "The company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.",
+    "interview_level": "medium",
+    "interview_duration": "5min",
+    "interview_type": "technical_projects",
+    "max_questions": 3,
+    "system_prompt": "You are an expert interviewer conducting a Technical Interview (Projects Based) for the role: Technology Intern\n\n[CANDIDATE RESUME]\n{'success': True, 'resume': {'pdfUrl': 'https://res.cloudinary.com/dlozn6fvo/raw/upload/v1777733631/resumes/1777733630002_Lekh_Nayak_Resume', 'userId': '69f5de1b366e143728d371cd', 'title': 'Lekh_Nayak_Resume.pdf', 'header': {'name': 'Lekh Nayak', 'phone': '9326456576', 'email': 'lekh.nayak23@spit.ac.in', 'github': 'github.com/LekhNayak'}, 'objective': '', 'education': [{'institution': 'Sardar Patel Institute Of Technology', 'degree': 'B.Tech in Computer Science Engineering', 'duration': 'Aug 2023 – Present', 'score': 'CGPA: 8.05 /10', '_id': '69f61002736094d63782c5d5'}, {'institution': 'IIT Patna', 'degree': 'Minor in Business Analytics', 'duration': 'Mar 2025 – Present', 'score': 'CGPA: 9.5/10', '_id': '69f61002736094d63782c5d6'}], 'skills': {'languages': ['Java', 'Python', 'JavaScript', 'SQL'], 'frameworks': ['React', 'Express.js', 'Node.js', 'PyTorch', 'Scikit-learn', 'NLTK', 'BERT'], 'other': ['Git', 'Docker', 'Team Management', 'Team Collaboration', 'Public Speaking']}, 'projects': [{'title': 'InterviewMate', 'duration': 'Sept 2025 - Dec 2025', 'tech': 'React, Node.js, Express, MongoDB, LangChain, Pinecone, OpenAI API', 'event': '', 'points': ['Architected a personalized interview preparation platform with a RAG pipeline using LangChain and Pinecone, achieving ̃85% retrieval accuracy across a knowledge base of 500+ domain-specific Q&A pairs for context-aware mock question generation.', 'Designed session-based storage and analytics in MongoDB, tracking feedback scores and performance trends across 50+ simulated interview sessions, enabling users to identify weak areas across 5+ topic categories.', 'Built an intelligent QnA interface integrating OpenAI’s GPT model for adaptive difficulty scaling and follow-up explanations, generating 10+ contextual follow-up questions per session based on user responses.'], '_id': '69f61002736094d63782c5d7'}, {'title': 'Collaborative VS Code', 'duration': 'Jan 2026 - Mar 2026', 'tech': 'React, Node.js, Express, WebSocket, Monaco Editor, Docker, PostgreSQL', 'event': '', 'points': ['Engineered a real-time collaborative code editor stress-tested with 30+ concurrent users, maintaining synchronized cursors, terminals, and file states with under 100ms sync latency.', 'Integrated Monaco Editor with syntax highlighting and intelligent suggestions across 6+ languages, executing code in Docker-isolated sandboxed environments for safe multi-user runs.', 'Designed a WebSocket-driven event system handling real-time collaboration, code execution broadcasts, and state consistency across all connected clients with zero data loss on reconnection.'], '_id': '69f61002736094d63782c5d8'}, {'title': 'CtrlFixIt', 'duration': 'Jan 2026 - Feb 2026', 'tech': 'Next.js, TypeScript, PostgreSQL, Redis, Docker, WebSockets, Kafka', 'event': '', 'points': ['Built a production-grade competitive coding platform deployed live for 300+ participants, handling 150+ concurrent sandboxed code execution jobs via a Piston-based Docker engine clustered with Kafka and tunneled through ngrok.', 'Engineered a real-time event system using WebSockets for live scoreboards, instant code execution feedback, and server-authoritative timing to ensure fairness across all connected clients.', 'Optimized for vertical scalability using Redis-backed queuing and Prisma ORM with PostgreSQL, supporting multi-language execution (Python, C++, Java, Go, Rust, JavaScript) with 1GB isolated temp memory per job.'], '_id': '69f61002736094d63782c5d9'}], 'activities': ['Lead chapter activities, manage a team of 50+ members, and drive strategic decisions to enhance CSI’s impact across technical and community initiatives.', 'Ideated and executed new technical events while managing operational logistics for 350+ participants, ensuring smooth coordination across teams and stakeholders.', '1st Place: La Casa De Code - National Level Hackathon (Dayananda Sagar University), 2x Abhimat - Lok Sabha Style Debate', '2nd Place: Runner up Best Delegate – AIPPM (mUNIFY SPIT Mumbai), MergeMania – Mergers & Acquisition (E-Summit 2025 SPIT Mumbai), Dreams and Deals – Pitching Contest, Annual Oxford Style Debate (SPCE Mumbai)', 'Finalist: HERE Geospatial Hackathon (Pan India Hiring Hack), Minithon (IIIT Bhubaneswar – top 9/60+), Airavat AI Hackathon (SPIT Mumbai 2024), Inspiriobiz 5.0 (VESIM Mumbai – top 10/300+ teams), Vishleshan – Canfem Case Study (TISS Mumbai – top 5/550+ teams), BizQuest (E-Summit 2024 SPIT Mumbai)'], '_id': '69f61002736094d63782c5d4', '__v': 0}}\n\n[JOB DESCRIPTION]\nThe company information is not fully provided, but the role requires a dynamic and motivated Technology Intern to contribute to transformative projects and drive business forward in a fast-paced, innovative environment.\n\n[INTERVIEW PARAMETERS]\n- Type: Technical Interview (Projects Based)\n- Level: MEDIUM\n- Duration: 5min\n- Max Questions: 3\n\n[INTERVIEW STYLE]\nFocus on the candidate's projects listed in their resume. Ask about architecture decisions, tech stack choices, challenges faced, how they solved problems, and what they would do differently. Probe depth of ownership and understanding. Do NOT ask generic DSA questions.\n\n[RULES]\n- Give a warm welcome after the candidate's introduction, then ask the first question.\n- Ask a maximum of 3 questions total. Keep track internally.\n- After the 3th question is answered, wrap up warmly: thank the candidate, give a brief encouraging closing remark, and end the interview. Do NOT ask another question.\n- Adjust question depth to difficulty level: medium.\n- Probe when answers are vague; move on when satisfied.\n- Keep each response focused — one question at a time.\n\nWait for the candidate's introduction before asking any questions.",
+    "conversation_history": [
+      {
+        "role": "candidate",
+        "content": "Hello, my name is Lekh  Sanathan Nayak. I am a third year student at Sardar Patel Institute of Technology and I am very excited for this role.",
+        "type": "intro"
+      },
+      {
+        "role": "interviewer",
+        "content": "Hello Lekh, it's great to meet you. Welcome to the interview for the Technology Intern role. We're excited to learn more about your experiences and projects. \n\nI've taken a look at your resume, and I'm impressed by the variety of projects you've worked on. Let's dive into one of them. Can you tell me more about your project \"InterviewMate\"? What inspired you to create a personalized interview preparation platform, and how did you decide on the tech stack, including React, Node.js, Express, MongoDB, LangChain, Pinecone, and OpenAI API?",
+        "type": "question"
+      },
+      {
+        "role": "candidate",
+        "content": "Yes, the project we have created, InterviewMate, is a platform where students can practice taking interviews so that while giving an actual real interview, they are not scared and they are well prepared enough so that they can succeed in their interview. And again, the tech stack I used here is React, Node, Express, MongoDB, Langchain, Pinecone, etc. I used React, Node and Express for frontend and backend because I am comfortable using that stack. Again, I used MongoDB because I am using unstructured data like this conversations and everything. These are unstructured data. And for storing unstructured data, MongoDB is the best in the business. Again, I am using Lanchain and Pinecone because I am using a custom Rack application here and OpenAI API for giving me a summary of that unstructured data that I am shooting in MongoDB.",
+        "type": "answer"
+      },
+      {
+        "role": "interviewer",
+        "content": "That's a great overview of the InterviewMate project, Lekh. It sounds like you've made some thoughtful decisions about the tech stack.\n\nI'd like to dive a bit deeper into the architecture of the project. You mentioned that you used LangChain and Pinecone to implement a custom RAG pipeline for context-aware mock question generation. Can you walk me through how this pipeline works, and what were some of the challenges you faced while implementing it? How did you optimize the retrieval accuracy to achieve the 85% accuracy you mentioned in your resume?",
+        "type": "question"
+      },
+      {
+        "role": "candidate",
+        "content": "Oh yeah, so the first thing for creating this rag pipeline was collecting the data and I requested my placement cell in my college to give me a data set of all the students that are placed and then I got all the resumes of the students that are placed so that I get a benchmark or a baseline that okay these resumes are very good they have a good ATS score resume should be made like this because these students have provided this resume and and they have also gotten selected. So the second thing that happens is vector searching and everything. Because when I search something about resume, if this ATS code is this bad, is this this, then it fetches all that things from the resume and then tells me.",
+        "type": "answer"
+      },
+      {
+        "role": "interviewer",
+        "content": "It sounds like you've made some interesting decisions about data collection and vector searching for the RAG pipeline. I'd like to explore another project of yours, to get a sense of your range and versatility as a developer.\n\nLet's talk about your project \"Collaborative VS Code\". You mentioned that you engineered a real-time collaborative code editor with features like synchronized cursors, terminals, and file states. Can you tell me more about how you designed the WebSocket-driven event system to handle real-time collaboration, and what were some of the challenges you faced in ensuring zero data loss on reconnection? How did you optimize the system to maintain under 100ms sync latency with 30+ concurrent users?",
+        "type": "question"
+      }
+    ],
+    "questions_asked": [
+      "Hello Lekh, it's great to meet you. Welcome to the interview for the Technology Intern role. We're excited to learn more about your experiences and projects. \n\nI've taken a look at your resume, and I'm impressed by the variety of projects you've worked on. Let's dive into one of them. Can you tell me more about your project \"InterviewMate\"? What inspired you to create a personalized interview preparation platform, and how did you decide on the tech stack, including React, Node.js, Express, MongoDB, LangChain, Pinecone, and OpenAI API?",
+      "That's a great overview of the InterviewMate project, Lekh. It sounds like you've made some thoughtful decisions about the tech stack.\n\nI'd like to dive a bit deeper into the architecture of the project. You mentioned that you used LangChain and Pinecone to implement a custom RAG pipeline for context-aware mock question generation. Can you walk me through how this pipeline works, and what were some of the challenges you faced while implementing it? How did you optimize the retrieval accuracy to achieve the 85% accuracy you mentioned in your resume?",
+      "It sounds like you've made some interesting decisions about data collection and vector searching for the RAG pipeline. I'd like to explore another project of yours, to get a sense of your range and versatility as a developer.\n\nLet's talk about your project \"Collaborative VS Code\". You mentioned that you engineered a real-time collaborative code editor with features like synchronized cursors, terminals, and file states. Can you tell me more about how you designed the WebSocket-driven event system to handle real-time collaboration, and what were some of the challenges you faced in ensuring zero data loss on reconnection? How did you optimize the system to maintain under 100ms sync latency with 30+ concurrent users?"
+    ],
+    "current_state": "completed",
+    "intro_received": true,
+    "start_time": "2026-05-02T20:24:59.562509",
+    "end_time": "2026-05-02T20:29:08.551796",
+    "feedback_generated": true
+  }
+]
