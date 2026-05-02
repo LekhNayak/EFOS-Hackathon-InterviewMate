@@ -202,6 +202,7 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const streamRef = useRef<MediaStream | null>(null);
     const chatEndRef = useRef<HTMLDivElement | null>(null);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
 
     // --- State for Media and UI ---
     const [hasMedia, setHasMedia] = useState(false);
@@ -264,6 +265,10 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
             if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
             if (liveIntervalRef.current) clearInterval(liveIntervalRef.current);
             if (mediaRecorder) mediaRecorder.stop(); // Stop recorder if running
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current = null;
+            }
         };
     }, []);
 
@@ -323,7 +328,13 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
             console.log("Attempting to play audio from FULL URL:", fullAudioUrl);
 
             try {
+                // Stop any currently playing audio
+                if (audioRef.current) {
+                    audioRef.current.pause();
+                }
                 const audio = new Audio(fullAudioUrl);
+                audioRef.current = audio;
+                audio.onended = () => { audioRef.current = null; };
                 audio.play();
             } catch (e) {
                 console.error("Error playing audio:", e);
@@ -686,6 +697,10 @@ export default function WebinarUI({ simulation }: { simulation: SimulationData }
         if (streamRef.current) {
             streamRef.current.getTracks().forEach(t => t.stop());
             streamRef.current = null;
+        }
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current = null;
         }
         setHasMedia(false);
         // In a real app, this would navigate to the dashboard
