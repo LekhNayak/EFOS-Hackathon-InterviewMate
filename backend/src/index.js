@@ -1,4 +1,5 @@
 require("dotenv").config();
+const PORT = process.env.PORT || 5000;
 const colors = require("colors");
 const cors = require("cors");
 const express = require("express");
@@ -20,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: ["http://localhost:8080", "https://inter-view-mate.vercel.app"],
+        origin: ["http://localhost:8080", "https://inter-view-mate.vercel.app", "https://efos-hackathon-interview-mate.vercel.app"],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         allowedHeaders: ["Content-Type", "Authorization"],
