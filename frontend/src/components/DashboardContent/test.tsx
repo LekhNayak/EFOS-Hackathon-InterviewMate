@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
 const API = import.meta.env.VITE_API_BASE_URL;
 import { v4 as uuidv4 } from "uuid";
 import ResumePreview from "@/components/Resume/ResumePreview";
@@ -111,10 +112,10 @@ const ResumeBuilder: React.FC = () => {
                     : null
             );
 
-            alert("Resume deleted successfully!");
+            toast.success("Resume deleted successfully!");
         } catch (err) {
             console.error("Delete failed:", err);
-            alert("Error deleting resume");
+            toast.error("Error deleting resume");
         }
     };
     const handleImport = (parsedResume: Resume) => {

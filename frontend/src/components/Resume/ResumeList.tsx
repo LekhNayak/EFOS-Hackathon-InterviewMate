@@ -125,6 +125,9 @@ const ResumeList: React.FC<Props> = ({
 }) => {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
     const [isSaving, setIsSaving] = useState(false);
+    const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+    const [renamingId, setRenamingId] = useState<string | null>(null);
+    const [renameValue, setRenameValue] = useState("");
 
     // ==========================
     // Handlers
@@ -267,17 +270,51 @@ const ResumeList: React.FC<Props> = ({
                             <div
                                 className="absolute right-3 top-12 bg-white/90 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-gray-200/70 rounded-xl w-44 text-sm z-20 py-1 backdrop-blur-md animate-fadeIn overflow-y-auto"
                             >
-                                <button
-                                    className="w-full text-left px-4 py-2 hover:bg-gray-100/80 rounded-md transition-colors"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        const name = prompt("New name:", r.title || r.header?.name);
-                                        if (name) onRename(r._id!, name);
-                                        setOpenMenu(null);
-                                    }}
-                                >
-                                    Rename
-                                </button>
+                                {renamingId === r._id ? (
+                                    <div className="px-3 py-2" onClick={e => e.stopPropagation()}>
+                                        <input
+                                            autoFocus
+                                            value={renameValue}
+                                            onChange={e => setRenameValue(e.target.value)}
+                                            onKeyDown={e => {
+                                                if (e.key === "Enter" && renameValue.trim()) {
+                                                    onRename(r._id!, renameValue.trim());
+                                                    setRenamingId(null);
+                                                    setOpenMenu(null);
+                                                }
+                                                if (e.key === "Escape") setRenamingId(null);
+                                            }}
+                                            className="w-full border border-gray-300 rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-gray-500"
+                                        />
+                                        <div className="flex gap-1 mt-1.5">
+                                            <button
+                                                onClick={() => {
+                                                    if (renameValue.trim()) {
+                                                        onRename(r._id!, renameValue.trim());
+                                                        setRenamingId(null);
+                                                        setOpenMenu(null);
+                                                    }
+                                                }}
+                                                className="text-xs px-2.5 py-1 bg-black text-white rounded-lg"
+                                            >Save</button>
+                                            <button
+                                                onClick={() => setRenamingId(null)}
+                                                className="text-xs px-2.5 py-1 border border-gray-300 rounded-lg text-gray-600"
+                                            >Cancel</button>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <button
+                                        className="w-full text-left px-4 py-2 hover:bg-gray-100/80 rounded-md transition-colors"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setRenamingId(r._id!);
+                                            setRenameValue(r.title || r.header?.name || "");
+                                        }}
+                                    >
+                                        Rename
+                                    </button>
+                                )}
                                 <button
                                     className="w-full text-left px-4 py-2 hover:bg-gray-100/80 rounded-md flex items-center gap-2 text-gray-700 transition-colors"
                                     onClick={(e) => {
@@ -287,16 +324,35 @@ const ResumeList: React.FC<Props> = ({
                                 >
                                     <Download size={14} /> Download PDF
                                 </button>
-                                <button
-                                    className="w-full text-left px-4 py-2 hover:bg-red-50/80 rounded-md text-red-600"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        if (confirm("Delete this resume?")) onDelete(r._id!);
-                                        setOpenMenu(null);
-                                    }}
-                                >
-                                    Delete
-                                </button>
+                                {confirmDeleteId === r._id ? (
+                                    <div className="px-3 py-2 border-t border-red-100 bg-red-50/50" onClick={e => e.stopPropagation()}>
+                                        <p className="text-xs text-gray-600 mb-1.5">Delete this resume?</p>
+                                        <div className="flex gap-1">
+                                            <button
+                                                onClick={() => {
+                                                    onDelete(r._id!);
+                                                    setConfirmDeleteId(null);
+                                                    setOpenMenu(null);
+                                                }}
+                                                className="text-xs px-2.5 py-1 bg-red-600 text-white rounded-lg"
+                                            >Delete</button>
+                                            <button
+                                                onClick={() => setConfirmDeleteId(null)}
+                                                className="text-xs px-2.5 py-1 border border-gray-300 rounded-lg text-gray-600"
+                                            >Cancel</button>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <button
+                                        className="w-full text-left px-4 py-2 hover:bg-red-50/80 rounded-md text-red-600"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setConfirmDeleteId(r._id!);
+                                        }}
+                                    >
+                                        Delete
+                                    </button>
+                                )}
                             </div>
                         )}
                     </div>
