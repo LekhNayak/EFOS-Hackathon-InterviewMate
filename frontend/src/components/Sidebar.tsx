@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const API = import.meta.env.VITE_API_BASE_URL;
 import {
     LayoutDashboard,
     PlayCircle,
@@ -23,11 +24,24 @@ export default function Sidebar({ activeMenu, setActiveMenu }: SidebarProps) {
     const navigate = useNavigate();
 
 
-    // ✅ Detect Mongo login
     useEffect(() => {
-        const storedUser = localStorage.getItem("user");
-
-        if (storedUser) setMongoUser(JSON.parse(storedUser));
+        const fetchUser = async () => {
+            try {
+                const res = await fetch(`${API}/user/profile`, { credentials: "include" });
+                const data = await res.json();
+                if (res.ok && data.user) {
+                    setMongoUser(data.user);
+                    localStorage.setItem("user", JSON.stringify(data.user));
+                } else {
+                    const stored = localStorage.getItem("user");
+                    if (stored) setMongoUser(JSON.parse(stored));
+                }
+            } catch {
+                const stored = localStorage.getItem("user");
+                if (stored) setMongoUser(JSON.parse(stored));
+            }
+        };
+        fetchUser();
     }, []);
 
     // ✅ Handle logout for both
