@@ -13,6 +13,7 @@
 | ATS Scoring | Match a resume against a job description; ChromaDB finds similar resumes via embeddings |
 | Emotion Recognition | Analyze speech patterns, emotion, and gender from audio (TensorFlow models) |
 | Job Finder | Search LinkedIn jobs via RapidAPI; location filter + infinite pagination (8/page, appends new batches) |
+| Skill Boost Hub | Multi-page resource carousel for Tech (LeetCode, boot.dev, etc.) and Communication (Elsa, Toastmasters) |
 | Progress Tracking | LeetCode, Codeforces, and interview history dashboard |
 | User Auth | JWT (cookies) + OTP email verification; profile with skills, social links |
 
@@ -24,15 +25,15 @@
 Browser (React + TS, :8080)
     │
     ▼
-Express API (Node.js, :8000)
+Express API (Node.js, :5000 or :8000)
     │
     ├── MongoDB Atlas (users, resumes, JDs, interviews, ATS results)
-    ├── Cloudinary (interview videos, resume PDFs)
-    ├── Groq API (resume parsing, LLM)
+    ├── Cloudinary (resume PDFs, interview records)
+    ├── Groq API (resume parsing, LLM-based analysis)
     ├── RapidAPI / LinkedIn Scraper (job search)
     └── Nodemailer (OTP email)
 
-Python Microservices (called by frontend directly or via Express):
+Python Microservices (Port-specific logic handled via Express proxy):
     ├── Interview Service  :5000   Flask — session management, Groq Q-gen, Sarvam TTS, transcription
     ├── ATS/Resume Service :6050   Flask — PDF parsing, Groq analysis, ChromaDB similarity
     └── Emotion Analysis   :8090   Flask — TensorFlow MFCC emotion/gender models
@@ -350,6 +351,14 @@ _id, email, otp, createdAt (TTL: 5 minutes)
 | Embeddings | sentence-transformers (all-MiniLM-L6-v2) | ATS service |
 | Vector DB | ChromaDB | Persisted in `resume_db/` |
 | Audio/ML | TensorFlow 2.20, Librosa | Emotion service |
+
+---
+
+## Production Deployment
+
+- **Frontend**: Deployed on Vercel at `https://inter-view-mate.vercel.app` and `https://efos-hackathon-interview-mate.vercel.app`.
+- **Backend**: Scalable Node.js environment with configured CORS to allow the above origins.
+- **Port Management**: In production, the backend defaults to `process.env.PORT` or `5000`.
 
 ---
 

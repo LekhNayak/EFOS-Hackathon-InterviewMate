@@ -288,6 +288,7 @@ You are an expert interviewer conducting a {type_label} for the role: {role}
 - Adjust question depth to difficulty level: {level}.
 - Probe when answers are vague; move on when satisfied.
 - Keep each response focused — one question at a time.
+- IMPORTANT: Keep every response to 3–4 sentences maximum. One sentence acknowledging the candidate's answer (brief, genuine), then ask a specific, in-depth follow-up or next question. No lengthy preambles or excessive praise.
 
 Wait for the candidate's introduction before asking any questions.
 """.strip()
@@ -369,13 +370,18 @@ def _groq_response(system: str, user: str) -> str:
             {"role": "user", "content": user},
         ],
         temperature=0.4,
-        max_tokens=1024,
+        max_tokens=350,
     )
     return response.choices[0].message.content.strip()
 
 
 def _generate_intro_response(session: Dict, intro_text: str) -> str:
-    user = f"Candidate introduction:\n{intro_text}\n\nRespond with a warm welcome and the first question."
+    user = (
+        f"Candidate introduction:\n{intro_text}\n\n"
+        "Greet the candidate warmly and naturally — like a real interviewer would. "
+        "Say hello, briefly acknowledge something specific from their intro (name, background, or experience), "
+        "then transition smoothly into the first interview question. Keep it friendly but professional."
+    )
     return _groq_response(session["system_prompt"], user)
 
 

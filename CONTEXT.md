@@ -8,33 +8,33 @@
 
 | Feature | Description |
 |---|---|
-| Interview Simulation | Practice live mock interviews; Gemini 2.0-flash generates contextual questions |
-| Resume Parsing | Upload a PDF resume; Gemini extracts structured data automatically |
-| ATS Scoring | Match a resume against a job description; ChromaDB finds similar resumes |
-| Emotion Recognition | Analyze speech patterns, emotion, and gender from audio |
-| Video Recording | Record interview sessions; stored in Cloudinary |
-| Progress Tracking | View past sessions, scores, and improvement areas |
-| User Auth | JWT + OTP email verification; profile with skills, social links |
+| Interview Simulation | Practice live mock interviews; Groq LLM (llama-3.3-70b-versatile) generates contextual questions |
+| Resume Parsing | Upload a PDF resume; Groq extracts structured data automatically |
+| ATS Scoring | Match a resume against a job description; ChromaDB finds similar resumes via embeddings |
+| Emotion Recognition | Analyze speech patterns, emotion, and gender from audio (TensorFlow models) |
+| Skill Boost Hub | Integrated carousel of external platforms (Tech & Communication) for user growth |
+| Progress Tracking | View past sessions, LeetCode/Codeforces stats, and improvement areas |
+| User Auth | JWT (HTTP-only cookies) + OTP email verification; comprehensive profile management |
 
 ---
 
 ## Architecture Overview
 
 ```
-Browser (React + TS)
+Browser (React + TS, :8080)
     │
     ▼
-Express API (Node.js)  ──────────────────────────────┐
+Express API (Node.js, :5000) ─────────────────────────┐
     │                                                 │
-    ├── MongoDB (users, resumes, JDs, interviews,    │
-    │            ATS results)                        │
-    ├── Firebase Storage (PDF resumes)               │
-    └── Cloudinary (interview videos)               │
-                                                     │
-Python Microservices (called by Express backend):    │
-    ├── Interview Service  :6000  ────────────────────┤
-    ├── ATS/Resume Service :5000  ────────────────────┤
-    └── Emotion/TTS-STT    :8090  ────────────────────┘
+    ├── MongoDB Atlas (users, resumes, JDs,           │
+    │                  interviews, ATS results)       │
+    ├── Cloudinary (PDF resumes, interview feedback)  │
+    └── Groq API (LLM for parsing & analysis)         │
+                                                      │
+Python Microservices (Proxied via Express backend):   │
+    ├── Interview Service  :5000 (Flask) ─────────────┤
+    ├── ATS/Resume Service :6050 (Flask) ─────────────┤
+    └── Emotion Analysis   :8090 (Flask) ─────────────┘
 ```
 
 ---
@@ -42,33 +42,28 @@ Python Microservices (called by Express backend):    │
 ## Repository Layout
 
 ```
-InterViewMate1.3/
+Efos-Virtual Hack/
 ├── frontend/                      React 19 + TypeScript + Vite + TailwindCSS
 │   └── src/
-│       ├── pages/                 Page-level components (auth, dashboard, interview…)
-│       ├── components/            Reusable UI (shadcn/ui + Radix)
+│       ├── pages/                 Page-level components (Interview.tsx, Dashboard.tsx…)
+│       ├── components/            Reusable UI (DashboardContent, profile, ui…)
 │       ├── hooks/                 Custom React hooks
-│       ├── types/                 TypeScript interfaces
+│       ├── types/                 TypeScript interfaces (Resume, Feedback…)
 │       └── main.tsx               Entry point
 │
 ├── backend/                       Node.js / Express 5
 │   └── src/
-│       ├── index.js               App entry point (port 5000 default)
-│       ├── routes/                API route definitions
-│       ├── handlers/              Route handler logic
-│       ├── models/                Mongoose schemas
+│       ├── index.js               App entry point (Default Port: 5000)
+│       ├── routes/                API route definitions (ats, user, parser, jd…)
+│       ├── handlers/              Route handler logic (ML service calls, DB ops)
+│       ├── models/                Mongoose schemas (User, ATS, Interview…)
 │       ├── middleware/            Auth (JWT), file upload (Multer)
-│       ├── config/                MongoDB connection
-│       └── utils/                 Validation helpers
+│       └── config/                DB and Cloudinary configurations
 │
 └── models/                        Python ML microservices
-    ├── Interview api_service/     Flask interview engine
-    │   ├── interview_service.py   Entry point
-    │   └── data/config.env        API keys (Gemini, AssemblyAI)
-    ├── Resume ATS and JD/         Flask ATS + resume similarity
-    │   └── api_service/main.py    Entry point
-    └── TTS and STT api_service/   Flask emotion recognition
-        └── main.py                Entry point
+    ├── Interview api_service/     Flask interview engine (:5000)
+    ├── Resume ATS and JD/         Flask ATS + resume similarity (:6050)
+    └── Audio_Emotion_Analysis/    Flask emotion recognition (:8090)
 ```
 
 ---
@@ -78,34 +73,29 @@ InterViewMate1.3/
 ### Frontend
 - **React 19** + **TypeScript 5.9** — UI framework
 - **Vite 7** — build tool (dev server on `localhost:8080`)
-- **TailwindCSS 4** — styling
-- **Radix UI / shadcn** — accessible component primitives
-- **TanStack Query** — server state / data fetching
-- **React Router DOM 7** — client-side routing
-- **Firebase 12** — auth + PDF storage
-- **Framer Motion** — animations
-- **Recharts** — analytics charts
-- **Tesseract.js** — OCR fallback for resume text
+- **TailwindCSS 4** — modern styling
+- **TanStack Query** — server state management
+- **React Router 7** — client-side routing
+- **Lucide React** — high-quality icons
+- **Framer Motion** — fluid UI transitions
+- **Recharts** — performance and progress visualization
 
 ### Backend
 - **Express 5** on **Node.js**
-- **MongoDB + Mongoose 8** — primary database
-- **JWT + bcrypt** — authentication
-- **Multer** — file upload
-- **Cloudinary** — video storage
-- **Google Generative AI (Gemini)** — resume parsing, JD analysis
-- **Nodemailer** — OTP emails
-- **pdf-parse** — PDF text extraction
-- **Axios** — calls to Python services
+- **MongoDB + Mongoose 8** — document database
+- **JWT + bcrypt** — secure authentication (Cookie-based)
+- **Multer** — file handling
+- **Cloudinary** — primary storage for resumes and session records
+- **Groq SDK** — fast LLM inference (llama-3.3-70b-versatile)
+- **Nodemailer** — transactional OTP emails
+- **pdf-parse** — local text extraction fallback
 
 ### Python Services
-- **Flask** — HTTP framework for all three services
-- **google-generativeai** — Gemini (interview questions, ATS analysis)
-- **AssemblyAI** — speech-to-text transcription
-- **gTTS** — text-to-speech for interviewer audio
-- **ChromaDB + sentence-transformers** — resume similarity search (ATS)
-- **TensorFlow 2.20 + librosa** — audio emotion/gender models
-- **PyPDF2** — PDF reading in ATS service
+- **Flask** — lightweight microservice framework
+- **Groq API** — question generation and ATS logic
+- **Sarvam AI** — high-quality Text-to-Speech (TTS)
+- **ChromaDB** — vector store for resume similarity
+- **TensorFlow + Librosa** — ML models for audio emotion analysis
 
 ---
 
@@ -122,119 +112,39 @@ npm run dev          # http://localhost:8080
 ```bash
 cd backend
 npm install
-npm run dev          # http://localhost:5000 (nodemon)
+npm run dev          # http://localhost:5000
 ```
 
-### Interview Service (Python)
-```bash
-cd "models/Interview api_service"
-pip install -r requirements.txt
-python interview_service.py     # http://localhost:6000
-```
-
-### ATS / Resume Service (Python)
-```bash
-cd "models/Resume ATS and JD/api_service"
-pip install -r requirements.txt
-python main.py                  # http://localhost:5000
-```
-
-### Emotion / TTS-STT Service (Python)
-```bash
-cd "models/TTS and STT api_service"
-python -m venv venv && venv\Scripts\activate   # Windows
-pip install -r requirements.txt
-python main.py                  # http://localhost:8090
-```
-
----
-
-## Environment Variables
-
-### Backend (`.env` in `backend/`)
-| Variable | Purpose |
-|---|---|
-| `MONGO_URI` | MongoDB connection string |
-| `PORT` | Express server port |
-| `SECRET_KEY` | JWT signing secret |
-| `CLOUDINARY_CLOUD_NAME` / `API_KEY` / `API_SECRET` | Video storage |
-| `FIREBASE_*` | Firebase config for PDF storage |
-| `GEMINI_API_KEY` | Google Generative AI |
-| `ML_SERVER` | Base URL for Python microservices |
-
-### Interview Service (`models/Interview api_service/data/config.env`)
-| Variable | Purpose |
-|---|---|
-| `GEMINI_API_KEY` | Gemini API |
-| `ASSEMBLYAI_API_KEY` | Speech-to-text |
-| `GEMINI_MODEL` | Model name (e.g. `gemini-2.0-flash`) |
-| `PORT` | Service port (default 6000) |
-
-### ATS Service (`.env`)
-| Variable | Purpose |
-|---|---|
-| `GOOGLE_API_KEY` | Gemini API |
-| `RESUME_DB_PATH` | Path to ChromaDB resume database |
-
----
-
-## Key API Endpoints
-
-### Express Backend (`/api/...`)
-| Route | Method | Description |
-|---|---|---|
-| `/api/user/signup/request-otp` | POST | Start signup, send OTP |
-| `/api/user/signup/complete` | POST | Confirm OTP, create account |
-| `/api/user/login` | POST | Login, returns JWT |
-| `/api/parser/parse` | POST | Parse PDF resume with Gemini |
-| `/api/jd/parse` | POST | Create / parse job description |
-| `/api/ats/analyze` | POST | Run ATS analysis (calls Python service) |
-| `/api/interview/create` | POST | Save interview session + video |
-
-### Interview Python Service (`/api/...`)
-| Route | Method | Description |
-|---|---|---|
-| `/api/start_interview` | POST | Create session |
-| `/api/submit_intro` | POST | Submit user intro |
-| `/api/submit_answer` | POST | Answer a question, get next |
-| `/api/transcribe_audio` | POST | Audio → text (AssemblyAI) |
-| `/api/get_feedback/{id}` | GET | Compiled feedback |
-
-### Emotion Service (`/api/...`)
-| Route | Method | Description |
-|---|---|---|
-| `/api/predict` | POST | Emotion + gender from audio |
-| `/api/analyze/features` | POST | Extract MFCC / mel-spectrogram |
-
----
-
-## Data Models (MongoDB)
-
-| Collection | Key Fields |
-|---|---|
-| `User` | email, password (hashed), name, skills, GitHub/LinkedIn URLs, JWT refresh token |
-| `ParsedResume` | userId, pdfUrl (Firebase), structured sections (header, education, skills, projects) |
-| `JobDescription` | title, company, description, requiredSkills, visibility (public/private) |
-| `ATS` | resumeId, jdId, geminiAnalysis, localScore (0–100), topMatchingResumes |
-| `Interview` | userId, type (Technical/Behavioral/Hybrid), resumeId, jdId, videoUrl, transcript (Q&A pairs) |
+### Microservices
+Ensure each Python service is running on its designated port:
+- **Interview Service**: Port 5000
+- **ATS Service**: Port 6050
+- **Emotion Service**: Port 8090
 
 ---
 
 ## Key Flows
 
-### Resume Upload
-1. User uploads PDF → Multer buffers in memory
-2. Backend saves to Firebase Storage, extracts text via `pdf-parse`
-3. Gemini parses text → structured JSON
-4. Saved as `ParsedResume` in MongoDB
+### 1. Resume Upload & Analysis
+- User uploads PDF → Express stores in Cloudinary → Extracts text.
+- Text is sent to **Groq** for structured parsing into JSON.
+- Saved to MongoDB under `ParsedResume` (user-scoped).
 
-### Interview Simulation
-1. Frontend starts session → Express calls Python Interview Service
-2. User submits audio → AssemblyAI transcribes → Gemini generates next question
-3. Interviewer responses are spoken via gTTS audio
-4. Session saved as `Interview` with Cloudinary video URL
+### 2. Interview Simulation
+- Frontend starts session via Express → Express proxies to **Interview Service**.
+- Audio recording sent for transcription → **Groq** generates next question.
+- **Sarvam AI** generates interviewer audio → played via managed `audioRef` for clean state.
+- Session ends → Feedback generated by LLM → Saved to MongoDB.
 
-### ATS Analysis
-1. User selects resume + JD → Express calls Python ATS Service
-2. Service extracts PDF text, runs Gemini analysis, queries ChromaDB for similar resumes
-3. Results stored as `ATS` document; frontend renders score + suggestions
+### 3. ATS Matching
+- User compares Resume + Job Description.
+- Express calls **ATS Service** at `:6050`.
+- Service extracts keywords, calculates match score (0-100), and identifies missing skills.
+
+---
+
+## Important Configurations
+
+- **CORS**: Backend allowed origins include `localhost:8080` and Vercel production domains.
+- **Environment**: All services require specific `.env` keys (Groq, Cloudinary, Mongo, etc.) as detailed in `backend/exampleENV.txt`.
+- **Media**: Interview audio is managed via React refs to ensure playback stops immediately on session exit.

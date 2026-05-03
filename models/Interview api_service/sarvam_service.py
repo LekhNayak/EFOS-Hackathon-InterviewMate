@@ -3,6 +3,7 @@ import io
 import os
 import re
 import wave
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import httpx
 
@@ -127,20 +128,29 @@ def _tts_chunk(text: str, language: str, client: httpx.Client) -> bytes:
 def text_to_speech(text: str, language: str = DEFAULT_LANGUAGE) -> bytes:
     """
     Convert text to audio using Sarvam TTS API (bulbul:v2).
-    Splits text into ≤490-char sentence chunks, synthesizes each, and
-    concatenates the WAV audio so the full response is spoken.
+    Splits text into ≤490-char sentence chunks, synthesizes all chunks in
+    parallel, then concatenates the WAV audio in order.
     """
     if language not in SUPPORTED_LANGUAGES:
         language = DEFAULT_LANGUAGE
 
     chunks = _split_into_chunks(text)
-    wav_buffers = []
-    with httpx.Client(timeout=30) as client:
-        for chunk in chunks:
-            wav_buffers.append(_tts_chunk(chunk, language, client))
+    if len(chunks) == 1:
+        with httpx.Client(timeout=30) as client:
+            return _tts_chunk(chunks[0], language, client)
 
-    if len(wav_buffers) == 1:
-        return wav_buffers[0]
+    wav_buffers = [None] * len(chunks)
+
+    def _fetch(idx: int, chunk: str) -> tuple[int, bytes]:
+        with httpx.Client(timeout=30) as client:
+            return idx, _tts_chunk(chunk, language, client)
+
+    with ThreadPoolExecutor(max_workers=len(chunks)) as pool:
+        futures = {pool.submit(_fetch, i, c): i for i, c in enumerate(chunks)}
+        for future in as_completed(futures):
+            idx, wav = future.result()
+            wav_buffers[idx] = wav
+
     return _concat_wav_bytes(wav_buffers)
 
 

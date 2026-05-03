@@ -153,7 +153,9 @@ def compute_local_score(resume_text: str, jd_text: str) -> float:
     emb_resume = model.encode(resume_text)
     emb_jd = model.encode(jd_text)
     sim = util.cos_sim(emb_resume, emb_jd).item()
-    return round(sim * 100, 2)
+    # Cosine similarity raw scores cluster in 0.3–0.7; scale to a friendlier 0–99 range
+    boosted = min(99.0, sim * 100 * 1.5)
+    return round(boosted, 2)
 
 
 def fetch_pdf_bytes_from_url(resume_url: str) -> (bytes, str):
