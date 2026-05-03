@@ -17,6 +17,14 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from melspec import plot_colored_polar, get_melspec, CAT6, CAT7, CAT3, COLOR_DICT
 from pydub import AudioSegment
+import imageio_ffmpeg
+import subprocess as _sp
+
+# Point pydub at the bundled ffmpeg binary so no system install is needed
+_FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+AudioSegment.converter = _FFMPEG
+AudioSegment.ffmpeg = _FFMPEG
+AudioSegment.ffprobe = _FFMPEG.replace("ffmpeg", "ffprobe") if "ffmpeg" in _FFMPEG else _FFMPEG
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -178,12 +186,16 @@ def health_check():
 
 def convert_to_wav(path):
     if path.lower().endswith(".wav"):
-        return path  # already WAV
-    
+        return path
+
     wav_path = path.rsplit(".", 1)[0] + ".wav"
     try:
-        audio = AudioSegment.from_file(path)
-        audio.export(wav_path, format="wav")
+        result = _sp.run(
+            [_FFMPEG, "-y", "-i", path, wav_path],
+            capture_output=True,
+        )
+        if result.returncode != 0:
+            raise Exception(result.stderr.decode(errors="replace"))
         return wav_path
     except Exception as e:
         raise Exception(f"FFmpeg conversion failed: {str(e)}")
