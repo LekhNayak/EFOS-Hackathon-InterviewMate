@@ -80,3 +80,10 @@
 {"session_id": "353e6921-efa0-463a-8df3-379c2801d9cc", "action": "new_question", "timestamp": "2026-05-03T12:21:41.495791", "questions_count": 2}
 {"session_id": "353e6921-efa0-463a-8df3-379c2801d9cc", "action": "new_question", "timestamp": "2026-05-03T12:23:04.971474", "questions_count": 3}
 {"session_id": "353e6921-efa0-463a-8df3-379c2801d9cc", "action": "end_interview", "timestamp": "2026-05-03T12:24:47.036192", "questions_count": 4}
+{"session_id": "3484b828-7c47-4661-9c1c-8f5e6b9a73f3", "action": "intro_submitted", "timestamp": "2026-05-03T13:50:42.245369"}
+{"session_id": "b04f0177-287e-492a-b019-2fce90f3fc9d", "action": "intro_submitted", "timestamp": "2026-05-03T14:44:50.181068"}
+{"session_id": "b04f0177-287e-492a-b019-2fce90f3fc9d", "action": "new_question", "timestamp": "2026-05-03T18:22:36.057564", "questions_count": 2}
+{"session_id": "62b327a7-83de-4308-9de0-1ef30028bb13", "action": "intro_submitted", "timestamp": "2026-05-04T12:13:55.762019"}
+{"session_id": "62b327a7-83de-4308-9de0-1ef30028bb13", "action": "new_question", "timestamp": "2026-05-04T12:15:34.799606", "questions_count": 2}
+{"session_id": "62b327a7-83de-4308-9de0-1ef30028bb13", "action": "new_question", "timestamp": "2026-05-04T12:16:34.157307", "questions_count": 3}
+{"session_id": "62b327a7-83de-4308-9de0-1ef30028bb13", "action": "end_interview", "timestamp": "2026-05-04T12:17:05.578585", "questions_count": 4}

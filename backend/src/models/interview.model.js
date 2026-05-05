@@ -35,6 +35,12 @@ const interviewSchema = new mongoose.Schema({
     ],
     feedback: {
         overall_rating:         { type: String, default: '' },
+        scores: {
+            technical_accuracy: { type: Number, default: 0 },
+            communication:      { type: Number, default: 0 },
+            depth:              { type: Number, default: 0 },
+            problem_solving:    { type: Number, default: 0 },
+        },
         summary:                { type: String, default: '' },
         strengths:              [{ type: String }],
         areas_for_improvement:  [{ type: String }],

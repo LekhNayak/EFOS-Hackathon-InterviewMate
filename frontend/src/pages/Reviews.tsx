@@ -12,8 +12,16 @@ const API = import.meta.env.VITE_API_BASE_URL;
 
 interface TranscriptEntry { question: string; answer: string; }
 
+interface Scores {
+    technical_accuracy: number;
+    communication: number;
+    depth: number;
+    problem_solving: number;
+}
+
 interface Feedback {
     overall_rating: string;
+    scores?: Scores;
     summary: string;
     strengths: string[];
     areas_for_improvement: string[];
@@ -31,6 +39,22 @@ interface Interview {
     transcript: TranscriptEntry[];
     feedback?: Feedback;
     createdAt: string;
+}
+
+function ScoreBar({ label, value }: { label: string; value: number }) {
+    const pct = Math.round((value / 10) * 100);
+    const color = value >= 7 ? "bg-green-500" : value >= 5 ? "bg-yellow-400" : "bg-red-400";
+    return (
+        <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-500 w-36 shrink-0">{label}</span>
+            <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                <div className={`h-full rounded-full transition-all duration-500 ${color}`} style={{ width: `${pct}%` }} />
+            </div>
+            <span className={`text-xs font-semibold w-6 text-right ${value >= 7 ? "text-green-600" : value >= 5 ? "text-yellow-600" : "text-red-500"}`}>
+                {value}
+            </span>
+        </div>
+    );
 }
 
 const TYPE_LABELS: Record<string, string> = {
@@ -178,6 +202,19 @@ export default function Reviews() {
                                                                     <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Summary</p>
                                                                     <p className="text-sm text-gray-700 leading-relaxed">{iv.feedback.summary}</p>
                                                                 </div>
+
+                                                                {/* Score breakdown */}
+                                                                {iv.feedback?.scores && Object.values(iv.feedback.scores).some(v => v > 0) && (
+                                                                    <div className="bg-white border border-gray-200 rounded-2xl p-4">
+                                                                        <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-3">Score Breakdown</p>
+                                                                        <div className="flex flex-col gap-2.5">
+                                                                            <ScoreBar label="Technical Accuracy" value={iv.feedback.scores.technical_accuracy} />
+                                                                            <ScoreBar label="Communication" value={iv.feedback.scores.communication} />
+                                                                            <ScoreBar label="Depth & Detail" value={iv.feedback.scores.depth} />
+                                                                            <ScoreBar label="Problem Solving" value={iv.feedback.scores.problem_solving} />
+                                                                        </div>
+                                                                    </div>
+                                                                )}
 
                                                                 {/* Strengths + Areas */}
                                                                 <div className="grid grid-cols-2 gap-4">

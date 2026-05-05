@@ -433,5 +433,32 @@
     },
     "role": "Technology Intern",
     "timestamp": "2026-05-03T12:24:48.591137"
+  },
+  {
+    "session_id": "62b327a7-83de-4308-9de0-1ef30028bb13",
+    "feedback": {
+      "overall_rating": "4",
+      "scores": {
+        "technical_accuracy": 5,
+        "communication": 3,
+        "depth": 2,
+        "problem_solving": 2
+      },
+      "summary": "The candidate demonstrated some familiarity with technical concepts but struggled to provide clear, detailed, and structured answers. Their communication skills and ability to delve into the depth of the topics were limited. The candidate's problem-solving approach was not well-articulated.",
+      "strengths": [
+        "Prior experience with certain technologies"
+      ],
+      "areas_for_improvement": [
+        "Providing detailed and structured answers",
+        "Improving communication skills",
+        "Enhancing problem-solving approach"
+      ],
+      "recommended_next_steps": [
+        "Practice answering technical questions with clear and concise responses",
+        "Focus on developing a more structured approach to problem-solving"
+      ]
+    },
+    "role": "Technology Intern",
+    "timestamp": "2026-05-04T12:17:07.267823"
   }
 ]

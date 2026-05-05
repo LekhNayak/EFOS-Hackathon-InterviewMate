@@ -412,22 +412,47 @@ def _generate_feedback(session: Dict) -> Dict:
     system = "You are an expert interview coach. Always respond with valid JSON only — no markdown, no explanation."
     user = f"""Role: {session['role']}
 Level: {session['interview_level']}
+Interview Type: {session.get('interview_type', 'technical_role')}
 Duration: {session['interview_duration']}
 
 Conversation:
 {conversation}
 
-Provide JSON:
+Score the candidate on each dimension from 1–10 based strictly on their actual answers above.
+Be objective — do not inflate scores. A score of 7+ means genuinely strong performance.
+
+Respond with ONLY valid JSON:
 {{
-  "overall_rating": "1-10",
-  "summary": "...",
-  "strengths": ["..."],
-  "areas_for_improvement": ["..."],
-  "recommended_next_steps": ["..."]
-}}"""
+  "overall_rating": <integer 1-10>,
+  "scores": {{
+    "technical_accuracy": <integer 1-10>,
+    "communication": <integer 1-10>,
+    "depth": <integer 1-10>,
+    "problem_solving": <integer 1-10>
+  }},
+  "summary": "2-3 sentence overall assessment of the candidate",
+  "strengths": ["specific strength 1", "specific strength 2"],
+  "areas_for_improvement": ["specific area 1", "specific area 2"],
+  "recommended_next_steps": ["actionable step 1", "actionable step 2"]
+}}
+
+Scoring guide:
+- technical_accuracy: Correctness of technical facts, concepts, and solutions given
+- communication: Clarity, structure, and confidence in how answers were delivered
+- depth: How detailed and thorough the answers were — did they go beyond surface level?
+- problem_solving: Logical thinking, structured approach, handling of edge cases
+- overall_rating: Holistic score weighing all four dimensions at {session['interview_level']} difficulty"""
     text = _groq_response(system, user)
     start, end = text.find("{"), text.rfind("}") + 1
     feedback = json.loads(text[start:end])
+
+    # Ensure overall_rating is always an integer string for frontend compat
+    scores = feedback.get("scores", {})
+    if scores and not feedback.get("overall_rating"):
+        vals = [v for v in scores.values() if isinstance(v, (int, float))]
+        feedback["overall_rating"] = str(round(sum(vals) / len(vals))) if vals else "0"
+    else:
+        feedback["overall_rating"] = str(feedback.get("overall_rating", "0"))
 
     all_feedback = _read_json(FEEDBACK_FILE)
     all_feedback.append(

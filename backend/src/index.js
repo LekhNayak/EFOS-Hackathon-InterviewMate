@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: ["http://localhost:8080", "https://inter-view-mate.vercel.app", "https://efos-hackathon-interview-mate.vercel.app"],
+        origin: ["http://localhost:8080", "https://inter-view-mate.vercel.app", "https://efos-hackathon-interview-mate.vercel.app", "https://interviewmate.lekh.online"],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         allowedHeaders: ["Content-Type", "Authorization"],
